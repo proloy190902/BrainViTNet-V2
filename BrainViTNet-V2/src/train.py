@@ -15,7 +15,7 @@ TEST_DIR  = "/kaggle/input/brain-tumor-dataset/Brain Tumor Data(1)/Brain Tumor D
 
 IMG_SIZE    = 224
 BATCH_SIZE  = 16
-NUM_EPOCHS  = 50
+NUM_EPOCHS  = 25
 WARMUP      = 5
 PATIENCE    = 10
 LR          = 1e-4
