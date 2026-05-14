@@ -1,6 +1,4 @@
-"""
-BrainViTNet-V2 — Training Script
-"""
+
 import math
 import torch
 import torch.nn.functional as F
