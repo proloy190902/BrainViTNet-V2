@@ -1,7 +1,4 @@
-"""
-BrainViTNet-V2 — Model Architecture
-IEEE TMI / Medical Image Analysis Target
-"""
+
 
 import os
 import torch
