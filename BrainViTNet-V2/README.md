@@ -2,9 +2,6 @@
 
 **A Hybrid ResNet-ViT Architecture for Brain Tumor Classification with Uncertainty Estimation**
 
-> Target: IEEE TMI / Medical Image Analysis
-
----
 
 ## 🏗️ Novel Components
 
@@ -64,65 +61,22 @@ python evaluate.py
 
 ---
 
-## 📊 Output Files
-
-| File | Description |
-|------|-------------|
-| `best_brainvitnet_v2.pth` | Best model weights |
-| `results/confusion_matrix_v2_300dpi.png` | Confusion matrix |
-| `results/roc_curve_v2_300dpi.png` | Per-class ROC curves |
-| `results/uncertainty_analysis_v2_300dpi.png` | Epistemic & aleatoric uncertainty |
-
----
-
-## 🗄️ Dataset
-
-[Brain Tumor MRI Dataset on Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
-
-**Classes:** `glioma` · `meningioma` · `notumor` · `pituitary`
-
----
-
 ## ⚙️ Key Hyperparameters
 
 | Parameter | Value |
 |-----------|-------|
 | Image Size | 224 × 224 |
 | Batch Size | 16 |
-| Max Epochs | 50 (early stop patience = 10) |
 | Optimizer | AdamW (lr = 1e-4, wd = 1e-4) |
 | Embed Dim | 512 |
 | ViT Heads | 8 |
 | MC Samples (T) | 10 |
 | Contrastive Temp | 0.07 |
-| Warmup Epochs | 5 |
 
 ---
 
-## 🐛 NaN Loss Fixes Applied
 
-- `log_var` clamped to `[-4, 4]` in AleatoricUncertaintyHead
-- Precision clamped to `max=10.0` in UncertaintyAwareLoss
-- Stable logsumexp in CrossDomainContrastiveLoss
-- Gradient clipping (`max_norm=1.0`)
-- LR warmup for stable early training
-- NaN/Inf loss batch skip guard
+
 
 ---
 
-## 📝 Citation
-
-```bibtex
-@article{brainvitnetv2_2025,
-  title   = {BrainViTNet-V2: Hybrid CNN-ViT with Dual Uncertainty for Brain Tumor Classification},
-  author  = {Your Name},
-  journal = {IEEE Transactions on Medical Imaging},
-  year    = {2025}
-}
-```
-
----
-
-## 📄 License
-
-MIT License
