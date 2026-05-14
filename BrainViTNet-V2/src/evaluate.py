@@ -1,7 +1,4 @@
-"""
-BrainViTNet-V2 — Evaluation + Visualization Script
-Run after training: python evaluate.py
-"""
+
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
